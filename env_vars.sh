@@ -1,0 +1,10 @@
+#!/bin/bash
+export ORG_NAME="7inCloud"
+export NAMESPACE_OPERATOR="rabbitmq-system"
+export NAMESPACE_RABBIT="rabbitmq"
+export AWS_ID="12345678901"
+export REGION01="us-east-1"
+export REGION02="us-west-1"
+export K8S01="us-east-1-prd"
+export K8S02="us-west-1-prd"
+export DOMAIN="internal.7incloud.com"
