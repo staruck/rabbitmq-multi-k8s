@@ -34,6 +34,14 @@ Ideal para organizações que necessitam de uma infraestrutura de mensageria dis
 - Helm instalado
 - kubectl instalado
 - jq instalado
+- aws cli
+
+#### Se você usar o CloudShell na AWS, somente precisa instalar o helm ()
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 \
+chmod 700 get_helm.sh \
+./get_helm.sh
+```
 
 ## Sumário
 - 1 - Preparação do ambiente
@@ -41,6 +49,7 @@ Ideal para organizações que necessitam de uma infraestrutura de mensageria dis
 - 3 - Cópias de segurança (backup)
 - 4 - Kubernetes - instala operator e cluster do RabbitMQ
 - 5 - Configuração RabbitMQ - federação e tls
+
 ### Tempo estimado: 20 minutos (Pode variar dependendo do tempo de publicação do DNS)
 
 # 1 - Preparação do ambiente
