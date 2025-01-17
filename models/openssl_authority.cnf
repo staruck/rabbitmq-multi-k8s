@@ -1,0 +1,12 @@
+[req]
+prompt             = no
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+organizationName = Seven IT Self-Signed Certificate Authority
+
+[req_ext]
+basicConstraints = @req_ext_basicConstraints
+
+[req_ext_basicConstraints]
+CA = TRUE

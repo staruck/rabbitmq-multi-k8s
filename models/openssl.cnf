@@ -1,0 +1,18 @@
+[req]
+prompt             = no
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext # openssl req
+
+[req_distinguished_name]
+organizationName = Seven IT Self-Signed Certificate
+commonName       = rabbitmq-us-east-1.dev.sevenit.com.br
+
+[req_ext]
+subjectAltName = @req_ext_subjectAltName
+
+[req_ext_subjectAltName]
+DNS.1 = rabbitmq-us-east-1.dev.sevenit.com.br
+DNS.2 = rabbitmq-amqp
+DNS.3 = rabbitmq-amqp.rabbitmq
+DNS.4 = rabbitmq-amqp.rabbitmq.svc
+DNS.5 = rabbitmq-amqp.rabbitmq.svc.cluster.local

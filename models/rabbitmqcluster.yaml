@@ -1,0 +1,27 @@
+---
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rabbitmq
+  namespace: rabbitmq
+spec:
+  replicas: 3
+  rabbitmq:
+    additionalPlugins:
+      - rabbitmq_federation
+      - rabbitmq_federation_management
+    additionalConfig: |
+      vm_memory_high_watermark.relative = 0.8
+  tls:
+    secretName: rabbitmq-us-east-1-certificate
+    caSecretName: rabbitmq-us-east-1-certificate
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 500m
+    limits:
+      memory: 512Mi
+      cpu: 500m
+  persistence:
+    storageClassName: gp2
+    storage: 10Gi
