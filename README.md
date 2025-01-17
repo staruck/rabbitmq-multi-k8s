@@ -36,11 +36,11 @@ Ideal para organizações que necessitam de uma infraestrutura de mensageria dis
 - jq instalado
 
 ## Sumário
-1 - Preparação do ambiente
-2 - Certificados
-3 - Cópias de segurança (backup)
-4 - Kubernetes - instala operator e cluster do RabbitMQ
-5 - Configuração RabbitMQ - federação e tls
+- 1 - Preparação do ambiente
+- 2 - Certificados
+- 3 - Cópias de segurança (backup)
+- 4 - Kubernetes - instala operator e cluster do RabbitMQ
+- 5 - Configuração RabbitMQ - federação e tls
 ### Tempo estimado: 20 minutos (Pode variar dependendo do tempo de publicação do DNS)
 
 # 1 - Preparação do ambiente
@@ -48,11 +48,11 @@ Ideal para organizações que necessitam de uma infraestrutura de mensageria dis
 ## Cópia dos dados, ajuste de permissões e variáveis
 - Copiar os arquivos do projeto
 ```
-aws s3 sync s3://seven-deploy-rabbit-template .
+git clone https://github.com/staruck/rabbitmq-multi-k8s.git
 ```
 - Ajuste permissões de execução
 ```
-cd RabbitMQ_on_k8s/
+cd rabbitmq-multi-k8s/
 chmod +x *.sh
 chmod +x ./scripts/*.sh
 ```
